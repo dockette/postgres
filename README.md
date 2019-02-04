@@ -1,6 +1,6 @@
 # Postgres
 
-Tuned PostgreSQL docker image.
+Tuned PostgreSQL 10 docker image.
 
 - configured unaccent for Czech language
 
@@ -13,10 +13,14 @@ Tuned PostgreSQL docker image.
 
 [![Join the chat](https://img.shields.io/gitter/room/dockette/dockette.svg?style=flat-square)](https://gitter.im/dockette/dockette?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+## Version
+
+- PostgreSQL 10
+
 ## Usage
 
 ```sh
-docker run --rm -it -p 5432:5432 dockette/postgres
+docker run --rm -it -p 5432:5432 dockette/postgres:10
 ```
 
 ## Test
