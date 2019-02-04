@@ -1,6 +1,8 @@
 # Postgres
 
-Postgres with configured unaccent for Czech language
+Tuned PostgreSQL docker image.
+
+- configured unaccent for Czech language
 
 -----
 
@@ -14,16 +16,16 @@ Postgres with configured unaccent for Czech language
 ## Usage
 
 ```sh
-docker build -t dockette-postgres .
+docker run --rm -it -p 5432:5432 dockette/postgres
+```
 
-docker run --rm -it -p 5432:5432 --name dockette-postgres dockette-postgres
+## Test
 
+```sql
+SELECT unaccent('Hôtel'); // Hotel
+SELECT unaccent('Žluťoučký kůň'); // Zlutoucky kun 
 ```
 
 ## Credits
 
-Thanks Ondrej Musil for: https://github.com/freaz/docker-postgres-czech-unaccent
-
-## Tip
-
-Without any docker volumes configured Postgres data will be lost after container stops.
+> Based on Ondrej Musil https://github.com/freaz/docker-postgres-czech-unaccent. Thank you.
