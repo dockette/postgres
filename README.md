@@ -13,7 +13,7 @@ Tuned PostgreSQL 10 docker image.
 
 [![Join the chat](https://img.shields.io/gitter/room/dockette/dockette.svg?style=flat-square)](https://gitter.im/dockette/dockette?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-## Version
+## Versions
 
 - PostgreSQL 10
 
@@ -33,3 +33,7 @@ SELECT unaccent('Žluťoučký kůň'); // Zlutoucky kun
 ## Credits
 
 > Based on Ondrej Musil https://github.com/freaz/docker-postgres-czech-unaccent. Thank you.
+
+## Resources
+
+- https://postgres.cz/wiki/Instalace_PostgreSQL#Instalace_Fulltextu
