@@ -1,6 +1,6 @@
 # Postgres
 
-Tuned PostgreSQL 10 docker image.
+Tuned PostgreSQL 10/11 docker image.
 
 - configured unaccent for Czech language
 
@@ -15,12 +15,13 @@ Tuned PostgreSQL 10 docker image.
 
 ## Versions
 
-- PostgreSQL 10
+- PostgreSQL 10/11
 
 ## Usage
 
 ```sh
 docker run --rm -it -p 5432:5432 dockette/postgres:10
+docker run --rm -it -p 5432:5432 dockette/postgres:11
 ```
 
 ## Test
