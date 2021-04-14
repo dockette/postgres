@@ -1,11 +1,12 @@
 FROM postgres:11
 
-ENV LANG cs_CZ.utf8
+ENV LC_ALL=cs_CZ.UTF-8
+ENV LANG=cs_CZ.UTF-8
+ENV LANGUAGE=cs_CZ.UTF-8
+ENV TZ=Europe/Prague
+ENV POSTGRES_VERSION=11
 
-COPY ./ext/unaccent/czech_unaccent.tar.gz /tmp
-COPY ./init-scripts/* /docker-entrypoint-initdb.d/
+COPY ./shared/misc/czech /usr/share/postgresql/${POSTGRES_VERSION}/tsearch_data
+COPY ./shared/init-scripts/* /docker-entrypoint-initdb.d/
 
-RUN localedef -i cs_CZ -c -f UTF-8 -A /usr/share/locale/locale.alias cs_CZ.UTF-8 && \
-    cd /tmp && tar xvzf czech_unaccent.tar.gz && \
-    cp fulltext_dicts/* /usr/share/postgresql/11/tsearch_data && \
-    rm -rf /tmp/*
+RUN localedef -i cs_CZ -c -f UTF-8 -A /usr/share/locale/locale.alias cs_CZ.UTF-8
