@@ -4,7 +4,7 @@ Tuned PostgreSQL 10/11/12/13 docker image.
 
 - extensions unaccent, intarray
 - configured czech language
-- 
+
 -----
 
 [![Docker Stars](https://img.shields.io/docker/stars/dockette/postgres.svg?style=flat)](https://hub.docker.com/r/dockette/postgres/)
