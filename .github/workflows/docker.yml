@@ -10,10 +10,11 @@ jobs:
     strategy:
       matrix:
         include:
-          - version: "10"
-          - version: "11"
-          - version: "12"
-          - version: "13"
+          - { version: "10", folder: "10" }
+          - { version: "11", folder: "11" }
+          - { version: "12", folder: "12" }
+          - { version: "13", folder: "13" }
+          - { version: "latest", folder: "13" }
 
       fail-fast: false
 
@@ -46,7 +47,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          file: ${{ matrix.version  }}/Dockerfile
+          file: ${{ matrix.folder  }}/Dockerfile
           push: true
           tags: dockette/postgres:${{ matrix.version }}
           cache-from: type=local,src=/tmp/.buildx-cache
