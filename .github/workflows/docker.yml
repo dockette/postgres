@@ -14,7 +14,8 @@ jobs:
           - { version: "11", folder: "11" }
           - { version: "12", folder: "12" }
           - { version: "13", folder: "13" }
-          - { version: "latest", folder: "13" }
+          - { version: "14", folder: "14" }
+          - { version: "latest", folder: "14" }
 
       fail-fast: false
 
