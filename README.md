@@ -1,6 +1,6 @@
 # Postgres
 
-Tuned PostgreSQL 10/11/12/13/14 docker image.
+Tuned PostgreSQL 10/11/12/13/14/15/16/17 docker image.
 
 - extensions unaccent, intarray
 - configured czech language
@@ -16,11 +16,14 @@ Tuned PostgreSQL 10/11/12/13/14 docker image.
 
 ## Versions
 
-- PostgreSQL 10/11/12/13/14
+- PostgreSQL 10/11/12/13/14/15/16/17
 
 ## Usage
 
 ```sh
+docker run --rm -it -p 5432:5432 dockette/postgres:17
+docker run --rm -it -p 5432:5432 dockette/postgres:16
+docker run --rm -it -p 5432:5432 dockette/postgres:15
 docker run --rm -it -p 5432:5432 dockette/postgres:14
 docker run --rm -it -p 5432:5432 dockette/postgres:13
 docker run --rm -it -p 5432:5432 dockette/postgres:12
