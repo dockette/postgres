@@ -51,3 +51,7 @@ Thank you for inspiration.
 Other resources.
 
 - https://postgres.cz/wiki/Instalace_PostgreSQL#Instalace_Fulltextu
+
+## Maintenance
+
+See [how to contribute](https://github.com/dockette/.github/blob/master/CONTRIBUTING.md) to this package.
